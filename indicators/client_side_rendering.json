@@ -2,5 +2,6 @@
     "Name": "client_side_rendering",
     "Title": "Client Side Rendering Example",
     "EodashIdentifier": "client_side_rendering",
-    "Collections": ["IDEAS2_wildlife", "CNR_TUR_1_water_discharge"]
+    "Collections": ["IDEAS2_wildlife", "CNR_TUR_1_water_discharge"],
+    "Image": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/dynamic_rendering.gif"
 }

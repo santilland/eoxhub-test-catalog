@@ -2,5 +2,6 @@
     "Name": "endpoint_integration",
     "Title": "Multiple Endpoints Example",
     "EodashIdentifier": "endpoint_integration",
-    "Collections": ["N2_CO2_mean", "PRCG_precipitation", "countries_vectortiles", "openinframap"]
+    "Collections": ["N2_CO2_mean", "PRCG_precipitation", "countries_vectortiles", "openinframap"],
+    "Image": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/endpoint_integration.gif"
 }
