@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "airss_results",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "The Canadian Arctic Ice Regime Shipping System (AIRSS) is intended to minimize the risk of pollution in Arctic waters due to damage of vessels by ice; to emphasize the responsibility of the shipowner and master for safety; and to provide a flexible framework for decision-making. It applies to CAC and Type (Baltic Class) ships, and requires accurate information for voyage planning, timely ice-charts, and consistent observation of ice conditions. The AIRSS is a four-step process: First, the user characterizes the ice regime. The ice regime is a region of ice with more or less consistent ice conditions. The ice regime takes into account several important factors of the ice; its concentration, thickness, age, state of decay, and roughness. Second, the vessel Class dependant Ice Multipliers are obtained. Because different vessels have different capabilities in ice-covered waters, each vessel is assessed and assigned to a Vessel Class. This rating reflects the strength, displacement, and power of the vessel. The relative risk damage to a vessel by different types of ice is taken into account using “weighting” factors called Ice Multipliers. Third, the information about the ice regime and the Ice Multipliers are combined to determine the Ice Numeral. (The Ice Numeral is a simple calculation that relates the strength of the ship to the danger presented by different ice regimes.) Finally, the Ice Numeral is used to decide whether the vessel should proceed or take an alternative route. Ice regimes that are not likely to be hazardous have zero or ‘positive’ Ice Numerals; whereas, those regimes that could be dangerous have ‘negative’ Ice Numerals. As always, the safety of the ship is the responsibility of the master.",
   "links": [
     {
       "rel": "root",
@@ -12,38 +12,23 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./airss_results/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
-      "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "title": "AIRSS Go or No-Go",
+      "endpointtype": "FlatGeobuf source",
+      "code": "airss_go_or_no_go",
+      "id": "airss_results",
       "themes": [
-        "atmosphere"
-      ],
-      "providers": [
-        "NASA"
+        "Shipping"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
-      ],
-      "tags": [
-        "Air quality",
-        "NO2",
-        "Open data",
-        "OMI"
+        "https://raw.githubusercontent.com/gtif-cerulean/assets/refs/heads/main/collections/Polartep_SeaIceCharts_demo/thumbnail.png"
       ],
       "agency": [
-        "NASA"
+        "Canadian Ice Service"
       ],
-      "subcode": "N1_NO2_monthly",
-      "sensor": [
-        "OMI"
-      ],
-      "satellite": [
-        "Aura"
-      ]
+      "subcode": "airss_go_or_no_go",
+      "collection_group": "Capabilities"
     },
     {
       "rel": "xyz",
@@ -127,136 +112,86 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+  "thumbnail": "https://raw.githubusercontent.com/gtif-cerulean/assets/refs/heads/main/collections/Polartep_SeaIceCharts_demo/thumbnail.png",
   "themes": [
-    "atmosphere"
-  ],
-  "tags": [
-    "Air quality",
-    "NO2",
-    "Open data",
-    "OMI"
+    "Shipping"
   ],
   "agency": [
-    "NASA"
+    "Canadian Ice Service"
   ],
-  "subcode": "N1_NO2_monthly",
-  "sensor": [
-    "OMI"
-  ],
-  "satellite": [
-    "Aura"
-  ],
+  "subcode": "airss_go_or_no_go",
+  "collection_group": "Capabilities",
   "eox:colorlegend": {
-    "domain": [
-      0,
-      108
-    ],
+    "title": "Is the vessel_type allowed to proceed?",
     "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
+      "#d9ef8b",
+      "#a6d96a",
+      "#66bd63",
+      "#1a9850",
+      "#ff8787",
+      "#ff5252",
+      "#ff0000",
+      "#a70000"
     ],
-    "scaleType": "continuous",
-    "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
+    "domain": [
+      "<= 0 IN < 2",
+      "<= 2 IN < 5",
+      "<= 5 IN < 10",
+      "IN > 10",
+      "<= -2 IN < 0",
+      "<= -5 IN < -2",
+      "<= -10 IN < -5",
+      "IN < -10"
+    ],
+    "scaleType": "categorical",
+    "markType": "circle"
   },
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "AIRSS Go or No-Go",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -50.0,
+          59.0,
+          -39.0,
+          65.0
         ],
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -50.0,
+          59.0,
+          -39.0,
+          65.0
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2024-08-13T00:00:00Z",
+          "2024-08-13T00:00:00Z"
         ]
       ]
     }
   },
   "license": "other",
-  "providers": [
-    {
-      "name": "NASA",
-      "roles": [
-        "licensor, producer, processor"
-      ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
-    }
-  ],
   "summaries": {
     "subcode": [
-      "N1_NO2_monthly"
+      "airss_go_or_no_go"
     ],
     "themes": [
-      "atmosphere"
-    ],
-    "satellite": [
-      "Aura"
-    ],
-    "sensor": [
-      "OMI"
+      "Shipping"
     ],
     "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "https://raw.githubusercontent.com/gtif-cerulean/assets/refs/heads/main/collections/Polartep_SeaIceCharts_demo/thumbnail.png"
     ]
   },
   "assets": {
-    "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
-      "type": "image/png",
-      "roles": [
-        "metadata"
-      ]
-    },
     "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+      "href": "https://raw.githubusercontent.com/gtif-cerulean/assets/refs/heads/main/collections/Polartep_SeaIceCharts_demo/thumbnail.png",
       "type": "image/png",
       "roles": [
         "thumbnail"
-      ]
-    },
-    "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
-      "type": "text/html",
-      "title": "Aura satellite",
-      "roles": [
-        "metadata"
-      ]
-    },
-    "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
-      "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
-      "roles": [
-        "metadata"
       ]
     },
     "Wind_Energy_Areas": {

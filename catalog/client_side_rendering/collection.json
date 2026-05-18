@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "client_side_rendering",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "",
   "links": [
     {
       "rel": "root",
@@ -12,37 +12,84 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./IDEAS2_wildlife/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
-      "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "title": "Wildlife Biodiversity Indicator",
+      "endpointtype": "COG source",
+      "subtitle": "Identify areas of high biodiversity",
+      "shortdescription": "This indicator shows patterns of wildlife biodiversity by combining observations of plants and animals with information on habitat health and human pressure. Using crowdsourced species data from the Global Biodiversity Information Facility (GBIF), together with endangered-species information and satellite-based habitat indicators, it helps people see where biodiversity is rich, where it is under threat, and why conservation matters. By exploring the map and filters, citizens can better understand how land use, vegetation health, and infrastructure affect wildlife.",
+      "code": "IND2_1",
+      "id": "IDEAS2_wildlife",
       "themes": [
-        "atmosphere"
+        "agriculture"
       ],
       "providers": [
-        "NASA"
+        "Murmuration"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/IDEAS2_wildlife/IDEAS2_wildlife.png"
       ],
       "tags": [
-        "Air quality",
-        "NO2",
-        "Open data",
-        "OMI"
+        "GBIF",
+        "Open data"
       ],
       "agency": [
-        "NASA"
+        "ESA"
       ],
-      "subcode": "N1_NO2_monthly",
+      "subcode": "IND2_1",
+      "satellite": [
+        "MODIS",
+        "Sentinel-3"
+      ],
+      "insituSources": [
+        "GBIF"
+      ],
+      "otherSources": [
+        "Open Data Soft"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./water_discharge/collection.json",
+      "type": "application/json",
+      "title": "Water turbidity",
+      "endpointtype": "COG source",
+      "shortdescription": "Water discharge — the volume of water flowing through a channel, such as a river or stream, per unit of time — is a fundamental metric for managing the global water cycle, ensuring public safety, supporting water resource management - including for drinking water and agriculture - and various economic sectors, and maintaining ecosystem health.",
+      "code": "CNR_TUR_1",
+      "id": "water_discharge",
+      "themes": [
+        "water"
+      ],
+      "providers": [
+        "CNR ISMAR",
+        "ESA",
+        "Copernicus Data Space Ecosystem",
+        "ONDA"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/CNR_TUR_1_water_discharge/CNR_TUR_1_water_discharge_photo.jpg"
+      ],
+      "tags": [
+        "Water quality",
+        "Marine",
+        "Copernicus Services",
+        "Sentinel-2",
+        "MSI",
+        "Water turbidity",
+        "Adriactic Sea",
+        "Open data",
+        "Marine monitoring",
+        "Total Suspended Sediments"
+      ],
+      "agency": [
+        "ESA"
+      ],
+      "subcode": "CNR_TUR_1",
       "sensor": [
-        "OMI"
+        "MSI"
       ],
       "satellite": [
-        "Aura"
+        "Sentinel-2"
       ]
     },
     {
@@ -127,136 +174,71 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
-  "themes": [
-    "atmosphere"
-  ],
-  "tags": [
-    "Air quality",
-    "NO2",
-    "Open data",
-    "OMI"
-  ],
-  "agency": [
-    "NASA"
-  ],
-  "subcode": "N1_NO2_monthly",
-  "sensor": [
-    "OMI"
-  ],
-  "satellite": [
-    "Aura"
-  ],
-  "eox:colorlegend": {
-    "domain": [
-      0,
-      108
-    ],
-    "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
-    ],
-    "scaleType": "continuous",
-    "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
-  },
+  "thumbnail": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/dynamic_rendering.gif",
+  "subcode": "client_side_rendering",
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "Client Side Rendering Example",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -24.0,
+          33.0,
+          42.0,
+          71.0
         ],
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -24.0,
+          33.0,
+          42.0,
+          71.0
+        ],
+        [
+          11.54,
+          44.73,
+          12.744,
+          45.113
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2019-02-05T10:08:28Z",
+          "2023-01-01T00:00:00Z"
         ]
       ]
     }
   },
   "license": "other",
-  "providers": [
-    {
-      "name": "NASA",
-      "roles": [
-        "licensor, producer, processor"
-      ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
-    }
-  ],
   "summaries": {
     "subcode": [
-      "N1_NO2_monthly"
+      "CNR_TUR_1",
+      "IND2_1"
     ],
     "themes": [
-      "atmosphere"
+      "water",
+      "agriculture"
     ],
     "satellite": [
-      "Aura"
+      "Sentinel-2",
+      "MODIS",
+      "Sentinel-3"
     ],
     "sensor": [
-      "OMI"
+      "MSI"
     ],
     "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/IDEAS2_wildlife/IDEAS2_wildlife.png",
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/CNR_TUR_1_water_discharge/CNR_TUR_1_water_discharge_photo.jpg"
     ]
   },
   "assets": {
-    "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
-      "type": "image/png",
-      "roles": [
-        "metadata"
-      ]
-    },
     "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+      "href": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/dynamic_rendering.gif",
       "type": "image/png",
       "roles": [
         "thumbnail"
-      ]
-    },
-    "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
-      "type": "text/html",
-      "title": "Aura satellite",
-      "roles": [
-        "metadata"
-      ]
-    },
-    "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
-      "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
-      "roles": [
-        "metadata"
       ]
     },
     "Wind_Energy_Areas": {

@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "antarctica_ship_route",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "Ship Route between Rothera Research Station and Middle of the Weddell Sea",
   "links": [
     {
       "rel": "root",
@@ -12,38 +12,21 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./antarctica_ship_route/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
-      "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "title": "Ship Route",
+      "endpointtype": "GeoJSON source",
+      "id": "antarctica_ship_route",
       "themes": [
-        "atmosphere"
-      ],
-      "providers": [
-        "NASA"
-      ],
-      "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+        "Shipping"
       ],
       "tags": [
-        "Air quality",
-        "NO2",
-        "Open data",
-        "OMI"
+        "processing"
       ],
       "agency": [
-        "NASA"
+        "ESA"
       ],
-      "subcode": "N1_NO2_monthly",
-      "sensor": [
-        "OMI"
-      ],
-      "satellite": [
-        "Aura"
-      ]
+      "collection_group": "Antarctica"
     },
     {
       "rel": "xyz",
@@ -127,138 +110,51 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
   "themes": [
-    "atmosphere"
+    "Shipping"
   ],
   "tags": [
-    "Air quality",
-    "NO2",
-    "Open data",
-    "OMI"
+    "processing"
   ],
   "agency": [
-    "NASA"
+    "ESA"
   ],
-  "subcode": "N1_NO2_monthly",
-  "sensor": [
-    "OMI"
-  ],
-  "satellite": [
-    "Aura"
-  ],
-  "eox:colorlegend": {
-    "domain": [
-      0,
-      108
-    ],
-    "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
-    ],
-    "scaleType": "continuous",
-    "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
-  },
+  "collection_group": "Antarctica",
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "Ship Route",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -68.125028,
+          -71.0,
+          -41.0,
+          -67.568783
         ],
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -68.125028,
+          -71.0,
+          -41.0,
+          -67.568783
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2025-10-08T00:00:00Z",
+          "2025-10-08T00:00:00Z"
         ]
       ]
     }
   },
   "license": "other",
-  "providers": [
-    {
-      "name": "NASA",
-      "roles": [
-        "licensor, producer, processor"
-      ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
-    }
-  ],
   "summaries": {
-    "subcode": [
-      "N1_NO2_monthly"
-    ],
     "themes": [
-      "atmosphere"
-    ],
-    "satellite": [
-      "Aura"
-    ],
-    "sensor": [
-      "OMI"
-    ],
-    "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "Shipping"
     ]
   },
   "assets": {
-    "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
-      "type": "image/png",
-      "roles": [
-        "metadata"
-      ]
-    },
-    "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
-      "type": "image/png",
-      "roles": [
-        "thumbnail"
-      ]
-    },
-    "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
-      "type": "text/html",
-      "title": "Aura satellite",
-      "roles": [
-        "metadata"
-      ]
-    },
-    "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
-      "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
-      "roles": [
-        "metadata"
-      ]
-    },
     "Wind_Energy_Areas": {
       "href": "https://workspace-ui-public.cif.gtif.eox.at/api/public/share/public-4wazei3y-02/wind_energy.geojson",
       "type": "application/geo+json",

@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "N2_CO2_mean",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "## Atmospheric Carbon Dioxide (from OCO-2)\n\nCarbon dioxide (CO2) is a greenhouse gas primarily emitted from the combustion of fossil fuels such as petroleum, coal, and natural gas. Scientists widely agree that the build-up of excess carbon dioxide and other greenhouse gases within Earth’s atmosphere has contributed to the rapid change in global climate.\n\nUnlike satellite-derived NO2 measurements, which are captured continuously on a daily basis, the coverage of CO2 measurements from OCO-2 and GOSAT is not as dense. Because of this, measurements from OCO-2 and GOSAT collected over weeks to months must be combined to yield high-resolution global maps of CO2. In addition, in order to account for long-range transport of CO2 by the wind, the data must further be assimilated into atmospheric transport models like those used to predict the weather.\n\nThe NASA dashboard uses NASA’s Global Earth Observing System Constituent Data Assimilation System (GEOS CoDAS) developed by GMAO to ingest the OCO-2 data and produce gap-filled maps.\n\nSource: [NASA Covid Dashboard](https://www.earthdata.nasa.gov/covid19/indicators/co2)\n\nRead more:\n- [Orbiting Carbon Observatory 2 (OCO-2)](https://ocov2.jpl.nasa.gov/)\n- [Orbiting Carbon Observatory 3 (OCO-3)](https://ocov3.jpl.nasa.gov/)\n- [Ozone Monitoring Instrument (OMI)](https://aura.gsfc.nasa.gov/omi.html)\n",
   "links": [
     {
       "rel": "root",
@@ -12,13 +12,13 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./N2_CO2_mean/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
+      "title": "Carbon Dioxide from OMI (daily)",
       "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "subtitle": "Mean daily Carbon Dioxide [ppm]",
+      "code": "N2_CO2_mean",
+      "id": "N2_CO2_mean",
       "themes": [
         "atmosphere"
       ],
@@ -26,24 +26,32 @@
         "NASA"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg"
       ],
       "tags": [
         "Air quality",
-        "NO2",
+        "CO2",
         "Open data",
-        "OMI"
+        "GHG",
+        "Greenhouse gases"
       ],
       "agency": [
         "NASA"
       ],
-      "subcode": "N1_NO2_monthly",
+      "subcode": "N2_CO2_mean",
       "sensor": [
-        "OMI"
+        "OCO-2"
       ],
       "satellite": [
-        "Aura"
+        "OCO-2"
       ]
+    },
+    {
+      "rel": "service",
+      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/main/assets/N2_CO2_mean/process_results.json",
+      "type": "application/json",
+      "id": "veda_statistics",
+      "method": "GET"
     },
     {
       "rel": "xyz",
@@ -127,76 +135,85 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+  "sci:publications": [
+    {
+      "citation": "Le Quéré, C., Jackson, R.B., Jones, M.W. et al. Temporary reduction in daily global CO2 emissions during the COVID-19 forced confinement. Nat. Clim. Chang. 10, 647–653 (2020).\n",
+      "doi": "10.1038/s41558-020-0797-x"
+    }
+  ],
+  "subtitle": "Mean daily Carbon Dioxide [ppm]",
+  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg",
   "themes": [
     "atmosphere"
   ],
   "tags": [
     "Air quality",
-    "NO2",
+    "CO2",
     "Open data",
-    "OMI"
+    "GHG",
+    "Greenhouse gases"
   ],
   "agency": [
     "NASA"
   ],
-  "subcode": "N1_NO2_monthly",
+  "subcode": "N2_CO2_mean",
   "sensor": [
-    "OMI"
+    "OCO-2"
   ],
   "satellite": [
-    "Aura"
+    "OCO-2"
   ],
   "eox:colorlegend": {
     "domain": [
-      0,
-      108
+      408,
+      419
     ],
     "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
+      "#313695",
+      "#4066ad",
+      "#5e93c4",
+      "#85bbd8",
+      "#afdbea",
+      "#d8eff6",
+      "#f3fad5",
+      "#fff3ad",
+      "#fed889",
+      "#fdb265",
+      "#f7814c",
+      "#e75136",
+      "#cb2527",
+      "#a50026"
     ],
     "scaleType": "continuous",
     "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
+    "title": "CO2 mean concentration [ppm]"
   },
+  "eodash:jsonform": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/form.json",
+  "eodash:vegadefinition": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/vega.json",
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "Carbon Dioxide from OMI (daily)",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -180.3125,
+          -90.25,
+          179.6875,
+          90.25
         ],
         [
-          -180.0,
-          -90.0,
-          180.0,
-          90.0
+          -180.3125,
+          -90.25,
+          179.6875,
+          90.25
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2015-01-01T00:00:00Z",
+          "2022-02-13T00:00:00Z"
         ]
       ]
     }
@@ -208,53 +225,46 @@
       "roles": [
         "licensor, producer, processor"
       ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
+      "url": "https://ocov2.jpl.nasa.gov/science/oco-2-data-center/"
     }
   ],
   "summaries": {
     "subcode": [
-      "N1_NO2_monthly"
+      "N2_CO2_mean"
     ],
     "themes": [
       "atmosphere"
     ],
     "satellite": [
-      "Aura"
+      "OCO-2"
     ],
     "sensor": [
-      "OMI"
+      "OCO-2"
     ],
     "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg"
     ]
   },
   "assets": {
-    "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
-      "type": "image/png",
-      "roles": [
-        "metadata"
-      ]
-    },
     "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg",
       "type": "image/png",
       "roles": [
         "thumbnail"
       ]
     },
     "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
+      "href": "https://science.nasa.gov/climate-change/scientific-consensus/",
       "type": "text/html",
-      "title": "Aura satellite",
+      "title": "Scientific Consensus on global climate change",
       "roles": [
         "metadata"
       ]
     },
     "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
+      "href": "https://ocov2.jpl.nasa.gov/",
       "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
+      "title": "Orbiting Carbon Observatory-2",
       "roles": [
         "metadata"
       ]

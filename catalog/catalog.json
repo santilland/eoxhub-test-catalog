@@ -21,6 +21,9 @@
         "agriculture",
         "water"
       ],
+      "providers": [
+        "TU Wien"
+      ],
       "subcode": "ESDL_Hydrology_SM",
       "satellite": [
         "Sentinel-1"
@@ -29,7 +32,7 @@
         "C-SAR"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/public-catalog/refs/heads/main/assets//ESDL_Hydrology_SM/image.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/ESDL_Hydrology_SM/image.png"
       ],
       "tags": [
         "Open data",
@@ -51,6 +54,9 @@
       "themes": [
         "atmosphere"
       ],
+      "providers": [
+        "NASA"
+      ],
       "subcode": "N1_NO2_monthly",
       "satellite": [
         "Aura"
@@ -59,7 +65,7 @@
         "OMI"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/public-catalog/refs/heads/main/assets//N1_NO2_monthly/thumbnail.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
       ],
       "tags": [
         "Air quality",
@@ -73,35 +79,228 @@
     },
     {
       "rel": "child",
-      "href": "./IDEAS2_wildlife/collection.json",
+      "href": "./airss_results/collection.json",
       "type": "application/json",
-      "title": "Wildlife Biodiversity Indicator",
-      "subtitle": "Identify areas of high biodiversity",
-      "code": "IND2_1",
-      "id": "IDEAS2_wildlife",
+      "title": "AIRSS Go or No-Go",
+      "code": "airss_go_or_no_go",
+      "id": "airss_results",
       "themes": [
-        "agriculture"
+        "Shipping"
       ],
-      "subcode": "IND2_1",
-      "satellite": [
-        "MODIS",
-        "Sentinel-3"
-      ],
+      "subcode": "airss_go_or_no_go",
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/public-catalog/refs/heads/main/assets//IDEAS2_wildlife/IDEAS2_wildlife.png"
+        "https://raw.githubusercontent.com/gtif-cerulean/assets/refs/heads/main/collections/Polartep_SeaIceCharts_demo/thumbnail.png"
+      ],
+      "agency": [
+        "Canadian Ice Service"
+      ],
+      "collection_group": "Capabilities"
+    },
+    {
+      "rel": "child",
+      "href": "./antarctica_ship_route/collection.json",
+      "type": "application/json",
+      "title": "Ship Route",
+      "id": "antarctica_ship_route",
+      "themes": [
+        "Shipping"
       ],
       "tags": [
-        "GBIF",
-        "Open data"
+        "processing"
       ],
       "agency": [
         "ESA"
       ],
-      "insituSources": [
-        "GBIF"
+      "collection_group": "Antarctica"
+    },
+    {
+      "rel": "child",
+      "href": "./precipitation/collection.json",
+      "type": "application/json",
+      "title": "Precipitation from GSMaP",
+      "subtitle": "Monthly precipitation product",
+      "code": "PRCG",
+      "id": "precipitation",
+      "themes": [
+        "agriculture"
       ],
-      "otherSources": [
-        "Open Data Soft"
+      "providers": [
+        "JAXA"
+      ],
+      "subcode": "PRCG",
+      "satellite": [
+        "TRMM",
+        "Aqua",
+        "ADEOS-II",
+        "DMSP-F11",
+        "DMSP-F13",
+        "DMSP-F14",
+        "DMSP-F15",
+        "Megha-Tropiques",
+        "GCOM-W1",
+        "GPM Core Observatory",
+        "DWSS-1",
+        "NOAA-N15",
+        "NOAA-N16",
+        "NOAA-N17",
+        "NOAA-N18",
+        "NOAA-N19",
+        "MetOp-A",
+        "MetOp-B",
+        "NPP",
+        "JPSS-1"
+      ],
+      "sensor": [
+        "TMI",
+        "AMSR-E",
+        "AMSR",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "MADRAS",
+        "AMSR2",
+        "GMI",
+        "TBD",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "ATMS",
+        "ATMS"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg"
+      ],
+      "tags": [
+        "Precipitation",
+        "Rainfall",
+        "Multi-sensors"
+      ],
+      "agency": [
+        "JAXA",
+        "NOAA",
+        "EUMETSAT",
+        "CNES",
+        "ISRO",
+        "DoD"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./client_side_rendering/collection.json",
+      "type": "application/json",
+      "title": "Client Side Rendering Example",
+      "code": "client_side_rendering",
+      "id": "client_side_rendering",
+      "subcode": "client_side_rendering",
+      "themes": [
+        "water",
+        "agriculture"
+      ],
+      "satellite": [
+        "Sentinel-2",
+        "MODIS",
+        "Sentinel-3"
+      ],
+      "sensor": [
+        "MSI"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/dynamic_rendering.gif"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./N2_CO2_mean/collection.json",
+      "type": "application/json",
+      "title": "Carbon Dioxide from OMI (daily)",
+      "subtitle": "Mean daily Carbon Dioxide [ppm]",
+      "code": "N2_CO2_mean",
+      "id": "N2_CO2_mean",
+      "themes": [
+        "atmosphere"
+      ],
+      "providers": [
+        "NASA"
+      ],
+      "subcode": "N2_CO2_mean",
+      "satellite": [
+        "OCO-2"
+      ],
+      "sensor": [
+        "OCO-2"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg"
+      ],
+      "tags": [
+        "Air quality",
+        "CO2",
+        "Open data",
+        "GHG",
+        "Greenhouse gases"
+      ],
+      "agency": [
+        "NASA"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./endpoint_integration/collection.json",
+      "type": "application/json",
+      "title": "Multiple Endpoints Example",
+      "code": "endpoint_integration",
+      "id": "endpoint_integration",
+      "subcode": "endpoint_integration",
+      "themes": [
+        "population",
+        "energy",
+        "agriculture",
+        "atmosphere"
+      ],
+      "satellite": [
+        "NOAA-N16",
+        "NPP",
+        "DMSP-F15",
+        "NOAA-N17",
+        "GCOM-W1",
+        "GPM Core Observatory",
+        "NOAA-N19",
+        "DWSS-1",
+        "NOAA-N15",
+        "ADEOS-II",
+        "Megha-Tropiques",
+        "OCO-2",
+        "NOAA-N18",
+        "DMSP-F14",
+        "MetOp-B",
+        "TRMM",
+        "DMSP-F13",
+        "Aqua",
+        "JPSS-1",
+        "MetOp-A",
+        "DMSP-F11"
+      ],
+      "sensor": [
+        "TBD",
+        "AMSU-A/MHS",
+        "AMSU-A/AMSU-B",
+        "ATMS",
+        "TMI",
+        "MADRAS",
+        "AMSR",
+        "SSM/I",
+        "AMSR2",
+        "AMSR-E",
+        "GMI",
+        "OCO-2"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/endpoint_integration.gif"
       ]
     },
     {

@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "precipitation",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "## Global Precipitation\n\n\nJAXA with Japanese MAFF provide agrometeorological information including Precipitation, Drought Index, Soil Moisture, Solar Radiation, Surface Temperature, Vegetation Index and anomaly,\netc. Rainfall, Agriculture, Land, GPM Core Observatory, SHIZUKU (GCOM-W), MODIS, Multiple Satellites (GSMaP) bi-Monthly on JASMIN for Asia and on JASMAI for selected world areas.\n\n\n### Additional information\n\n- Access Jaxa’s Public-health Monitor and Analysis Platform: [https://www.jpmap-jaxa.jp/jpmap/en/user_guide/](https://www.jpmap-jaxa.jp/jpmap/en/user_guide/)\n- Access JAXA's GSMaP (Global Satellite Mapping of Precipitation): [https://sharaku.eorc.jaxa.jp/GSMaP/](https://sharaku.eorc.jaxa.jp/GSMaP/)\n- GSMaP Documentation: [https://www.eorc.jaxa.jp/GPM/doc/algorithm/GSMaPforGPM_20140902_E.pdf](https://www.eorc.jaxa.jp/GPM/doc/algorithm/GSMaPforGPM_20140902_E.pdf)\n",
   "links": [
     {
       "rel": "root",
@@ -12,37 +12,79 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./precipitation/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
-      "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "title": "Precipitation from GSMaP",
+      "endpointtype": "WMS_Time",
+      "subtitle": "Monthly precipitation product",
+      "code": "PRCG",
+      "id": "precipitation",
       "themes": [
-        "atmosphere"
+        "agriculture"
       ],
       "providers": [
-        "NASA"
+        "JAXA"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg"
       ],
       "tags": [
-        "Air quality",
-        "NO2",
-        "Open data",
-        "OMI"
+        "Precipitation",
+        "Rainfall",
+        "Multi-sensors"
       ],
       "agency": [
-        "NASA"
+        "JAXA",
+        "NOAA",
+        "EUMETSAT",
+        "CNES",
+        "ISRO",
+        "DoD"
       ],
-      "subcode": "N1_NO2_monthly",
+      "subcode": "PRCG",
       "sensor": [
-        "OMI"
+        "TMI",
+        "AMSR-E",
+        "AMSR",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "MADRAS",
+        "AMSR2",
+        "GMI",
+        "TBD",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "ATMS",
+        "ATMS"
       ],
       "satellite": [
-        "Aura"
+        "TRMM",
+        "Aqua",
+        "ADEOS-II",
+        "DMSP-F11",
+        "DMSP-F13",
+        "DMSP-F14",
+        "DMSP-F15",
+        "Megha-Tropiques",
+        "GCOM-W1",
+        "GPM Core Observatory",
+        "DWSS-1",
+        "NOAA-N15",
+        "NOAA-N16",
+        "NOAA-N17",
+        "NOAA-N18",
+        "NOAA-N19",
+        "MetOp-A",
+        "MetOp-B",
+        "NPP",
+        "JPSS-1"
       ]
     },
     {
@@ -127,54 +169,89 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+  "subtitle": "Monthly precipitation product",
+  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg",
   "themes": [
-    "atmosphere"
+    "agriculture"
   ],
   "tags": [
-    "Air quality",
-    "NO2",
-    "Open data",
-    "OMI"
+    "Precipitation",
+    "Rainfall",
+    "Multi-sensors"
   ],
   "agency": [
-    "NASA"
+    "JAXA",
+    "NOAA",
+    "EUMETSAT",
+    "CNES",
+    "ISRO",
+    "DoD"
   ],
-  "subcode": "N1_NO2_monthly",
+  "subcode": "PRCG",
   "sensor": [
-    "OMI"
+    "TMI",
+    "AMSR-E",
+    "AMSR",
+    "SSM/I",
+    "SSM/I",
+    "SSM/I",
+    "SSM/I",
+    "MADRAS",
+    "AMSR2",
+    "GMI",
+    "TBD",
+    "AMSU-A/AMSU-B",
+    "AMSU-A/AMSU-B",
+    "AMSU-A/AMSU-B",
+    "AMSU-A/MHS",
+    "AMSU-A/MHS",
+    "AMSU-A/MHS",
+    "AMSU-A/MHS",
+    "ATMS",
+    "ATMS"
   ],
   "satellite": [
-    "Aura"
+    "TRMM",
+    "Aqua",
+    "ADEOS-II",
+    "DMSP-F11",
+    "DMSP-F13",
+    "DMSP-F14",
+    "DMSP-F15",
+    "Megha-Tropiques",
+    "GCOM-W1",
+    "GPM Core Observatory",
+    "DWSS-1",
+    "NOAA-N15",
+    "NOAA-N16",
+    "NOAA-N17",
+    "NOAA-N18",
+    "NOAA-N19",
+    "MetOp-A",
+    "MetOp-B",
+    "NPP",
+    "JPSS-1"
   ],
   "eox:colorlegend": {
     "domain": [
       0,
-      108
+      300
     ],
     "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
+      "#ffffff",
+      "#4040da",
+      "#1ccb9a",
+      "#bdff0c",
+      "#ffe01c",
+      "#ff5100",
+      "#b10600"
     ],
     "scaleType": "continuous",
     "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
+    "title": "Precipitation"
   },
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "Precipitation from GSMaP",
   "extent": {
     "spatial": {
       "bbox": [
@@ -195,8 +272,8 @@
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2022-01-01T00:00:00Z",
+          "2025-06-30T23:59:59Z"
         ]
       ]
     }
@@ -204,57 +281,94 @@
   "license": "other",
   "providers": [
     {
-      "name": "NASA",
+      "name": "JAXA",
       "roles": [
         "licensor, producer, processor"
       ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
+      "url": "https://global.jaxa.jp/"
     }
   ],
   "summaries": {
     "subcode": [
-      "N1_NO2_monthly"
+      "PRCG"
     ],
     "themes": [
-      "atmosphere"
+      "agriculture"
     ],
     "satellite": [
-      "Aura"
+      "NOAA-N16",
+      "NPP",
+      "DMSP-F15",
+      "NOAA-N17",
+      "GCOM-W1",
+      "GPM Core Observatory",
+      "NOAA-N19",
+      "DWSS-1",
+      "NOAA-N15",
+      "ADEOS-II",
+      "Megha-Tropiques",
+      "NOAA-N18",
+      "DMSP-F14",
+      "MetOp-B",
+      "TRMM",
+      "DMSP-F13",
+      "Aqua",
+      "JPSS-1",
+      "MetOp-A",
+      "DMSP-F11"
     ],
     "sensor": [
-      "OMI"
+      "TBD",
+      "AMSU-A/MHS",
+      "AMSU-A/AMSU-B",
+      "ATMS",
+      "TMI",
+      "AMSR",
+      "SSM/I",
+      "AMSR2",
+      "AMSR-E",
+      "GMI",
+      "MADRAS"
     ],
     "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg"
     ]
   },
   "assets": {
     "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
+      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_legend.png",
       "type": "image/png",
       "roles": [
         "metadata"
       ]
     },
     "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg",
       "type": "image/png",
       "roles": [
         "thumbnail"
       ]
     },
     "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
+      "href": "https://www.jpmap-jaxa.jp/jpmap/en/user_guide/",
       "type": "text/html",
-      "title": "Aura satellite",
+      "title": "Jaxa Public-health Monitor and Analysis Platform",
       "roles": [
         "metadata"
       ]
     },
     "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
+      "href": "https://sharaku.eorc.jaxa.jp/GSMaP/",
       "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
+      "title": "Jaxa Global Satellite Mapping of Precipitation",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "reference_3": {
+      "href": "https://www.eorc.jaxa.jp/GPM/doc/algorithm/GSMaPforGPM_20140902_E.pdf",
+      "type": "text/html",
+      "title": "GSMaP Documentation",
       "roles": [
         "metadata"
       ]

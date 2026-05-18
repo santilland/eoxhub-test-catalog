@@ -1,8 +1,8 @@
 {
   "type": "Collection",
-  "id": "N1_NO2_monthly",
+  "id": "endpoint_integration",
   "stac_version": "1.1.0",
-  "description": "## Nitrogen Dioxide Monthly\n\nCars, trucks, power plants, and other industrial facilities emit nitrogen dioxide (NO2) as a product of burning fossil fuels. Once in the air, nitrogen dioxide can aggravate respiratory conditions, especially in people with asthma, leading to an increase of symptoms and hospital admissions. Long-term exposure can lead to the development of asthma and potentially increase susceptibility to respiratory infections. Nitrogen dioxide can quickly transform into ground-level ozone, a major respiratory pollutant and one of the main ingredients of summertime smog. Source: [Earthdata.Nasa.gov](https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data)\n\n\nThese maps present AURA OMI average tropospheric NO2 compared.\n\nFor details about this product, data access and additional products please visit https://www.earthdata.nasa.gov/learn/articles/find-no2-data#Visualize%20No2%20Data \n\n",
+  "description": "",
   "links": [
     {
       "rel": "root",
@@ -12,13 +12,13 @@
     },
     {
       "rel": "child",
-      "href": "./N1_NO2_monthly/collection.json",
+      "href": "./N2_CO2_mean/collection.json",
       "type": "application/json",
-      "title": "Nitrogen Dioxide (Monthly)",
+      "title": "Carbon Dioxide from OMI (daily)",
       "endpointtype": "VEDA_cog",
-      "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-      "code": "N1_NO2_monthly",
-      "id": "N1_NO2_monthly",
+      "subtitle": "Mean daily Carbon Dioxide [ppm]",
+      "code": "N2_CO2_mean",
+      "id": "N2_CO2_mean",
       "themes": [
         "atmosphere"
       ],
@@ -26,23 +26,130 @@
         "NASA"
       ],
       "thumbnail": [
-        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg"
       ],
       "tags": [
         "Air quality",
-        "NO2",
+        "CO2",
         "Open data",
-        "OMI"
+        "GHG",
+        "Greenhouse gases"
       ],
       "agency": [
         "NASA"
       ],
-      "subcode": "N1_NO2_monthly",
+      "subcode": "N2_CO2_mean",
       "sensor": [
-        "OMI"
+        "OCO-2"
       ],
       "satellite": [
-        "Aura"
+        "OCO-2"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./precipitation/collection.json",
+      "type": "application/json",
+      "title": "Precipitation from GSMaP",
+      "endpointtype": "WMS_Time",
+      "subtitle": "Monthly precipitation product",
+      "code": "PRCG",
+      "id": "precipitation",
+      "themes": [
+        "agriculture"
+      ],
+      "providers": [
+        "JAXA"
+      ],
+      "thumbnail": [
+        "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg"
+      ],
+      "tags": [
+        "Precipitation",
+        "Rainfall",
+        "Multi-sensors"
+      ],
+      "agency": [
+        "JAXA",
+        "NOAA",
+        "EUMETSAT",
+        "CNES",
+        "ISRO",
+        "DoD"
+      ],
+      "subcode": "PRCG",
+      "sensor": [
+        "TMI",
+        "AMSR-E",
+        "AMSR",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "SSM/I",
+        "MADRAS",
+        "AMSR2",
+        "GMI",
+        "TBD",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/AMSU-B",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "AMSU-A/MHS",
+        "ATMS",
+        "ATMS"
+      ],
+      "satellite": [
+        "TRMM",
+        "Aqua",
+        "ADEOS-II",
+        "DMSP-F11",
+        "DMSP-F13",
+        "DMSP-F14",
+        "DMSP-F15",
+        "Megha-Tropiques",
+        "GCOM-W1",
+        "GPM Core Observatory",
+        "DWSS-1",
+        "NOAA-N15",
+        "NOAA-N16",
+        "NOAA-N17",
+        "NOAA-N18",
+        "NOAA-N19",
+        "MetOp-A",
+        "MetOp-B",
+        "NPP",
+        "JPSS-1"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./countries_vectortiles/collection.json",
+      "type": "application/json",
+      "title": "Countries Vector Tiles",
+      "endpointtype": "VectorTile source",
+      "id": "countries_vectortiles",
+      "themes": [
+        "population"
+      ],
+      "tags": [
+        "countries",
+        "vector tiles"
+      ]
+    },
+    {
+      "rel": "child",
+      "href": "./openinframap/collection.json",
+      "type": "application/json",
+      "title": "Open Infrastructure Map",
+      "endpointtype": "MapboxStyle source",
+      "id": "openinframap",
+      "themes": [
+        "energy"
+      ],
+      "tags": [
+        "energy"
       ]
     },
     {
@@ -127,57 +234,25 @@
       "title": "EOxHub test1 workspace Catalog"
     }
   ],
-  "subtitle": "Mean NO2 column density based on OMI data [10^15 mol/cm²]",
-  "thumbnail": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
-  "themes": [
-    "atmosphere"
-  ],
-  "tags": [
-    "Air quality",
-    "NO2",
-    "Open data",
-    "OMI"
-  ],
-  "agency": [
-    "NASA"
-  ],
-  "subcode": "N1_NO2_monthly",
-  "sensor": [
-    "OMI"
-  ],
-  "satellite": [
-    "Aura"
-  ],
-  "eox:colorlegend": {
-    "domain": [
-      0,
-      108
-    ],
-    "range": [
-      "#fff5f0",
-      "#fee8de",
-      "#fed7c7",
-      "#fcc1a9",
-      "#fca88b",
-      "#fc8f6f",
-      "#fb7656",
-      "#f75c41",
-      "#f03f2e",
-      "#dc2824",
-      "#c5171c",
-      "#ae1117",
-      "#8d0912",
-      "#67000d"
-    ],
-    "scaleType": "continuous",
-    "tickFormat": ".0f",
-    "title": "NO2 [µmol/m²]"
-  },
+  "thumbnail": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/endpoint_integration.gif",
+  "subcode": "endpoint_integration",
   "eodash:merge_assets": false,
-  "title": "Nitrogen Dioxide (Monthly)",
+  "title": "Multiple Endpoints Example",
   "extent": {
     "spatial": {
       "bbox": [
+        [
+          -180.3125,
+          -90.25,
+          180.0,
+          90.25
+        ],
+        [
+          -180.3125,
+          -90.25,
+          179.6875,
+          90.25
+        ],
         [
           -180.0,
           -90.0,
@@ -186,77 +261,87 @@
         ],
         [
           -180.0,
-          -90.0,
+          -85.0,
           180.0,
-          90.0
+          85.0
+        ],
+        [
+          -180.0,
+          -85.0,
+          180.0,
+          85.0
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2016-01-01T00:00:00Z",
-          "2023-09-01T00:00:00Z"
+          "2015-01-01T00:00:00Z",
+          "2025-06-30T23:59:59Z"
         ]
       ]
     }
   },
   "license": "other",
-  "providers": [
-    {
-      "name": "NASA",
-      "roles": [
-        "licensor, producer, processor"
-      ],
-      "url": "https://www.earthdata.nasa.gov/learn/articles/find-no2-data"
-    }
-  ],
   "summaries": {
     "subcode": [
-      "N1_NO2_monthly"
+      "PRCG",
+      "N2_CO2_mean"
     ],
     "themes": [
+      "population",
+      "energy",
+      "agriculture",
       "atmosphere"
     ],
     "satellite": [
-      "Aura"
+      "NOAA-N16",
+      "NPP",
+      "DMSP-F15",
+      "NOAA-N17",
+      "GCOM-W1",
+      "GPM Core Observatory",
+      "NOAA-N19",
+      "DWSS-1",
+      "NOAA-N15",
+      "ADEOS-II",
+      "Megha-Tropiques",
+      "OCO-2",
+      "NOAA-N18",
+      "DMSP-F14",
+      "MetOp-B",
+      "TRMM",
+      "DMSP-F13",
+      "Aqua",
+      "JPSS-1",
+      "MetOp-A",
+      "DMSP-F11"
     ],
     "sensor": [
-      "OMI"
+      "TBD",
+      "AMSU-A/MHS",
+      "AMSU-A/AMSU-B",
+      "ATMS",
+      "TMI",
+      "MADRAS",
+      "AMSR",
+      "SSM/I",
+      "AMSR2",
+      "AMSR-E",
+      "GMI",
+      "OCO-2"
     ],
     "thumbnail": [
-      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png"
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/PRCG_precipitation/PRCG_precipitation.jpg",
+      "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N2_CO2_mean/N2_CO2_mean.jpg"
     ]
   },
   "assets": {
-    "legend": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/cm_legend.png",
-      "type": "image/png",
-      "roles": [
-        "metadata"
-      ]
-    },
     "thumbnail": {
-      "href": "https://raw.githubusercontent.com/eoxhub-workspaces/eoxhub-test-catalog/refs/heads/main/assets/N1_NO2_monthly/thumbnail.png",
+      "href": "https://raw.githubusercontent.com/eodash/eodash-docs/refs/heads/main/public/assets/endpoint_integration.gif",
       "type": "image/png",
       "roles": [
         "thumbnail"
-      ]
-    },
-    "reference_1": {
-      "href": "https://aura.gsfc.nasa.gov/index.html",
-      "type": "text/html",
-      "title": "Aura satellite",
-      "roles": [
-        "metadata"
-      ]
-    },
-    "reference_2": {
-      "href": "https://earthobservatory.nasa.gov/images/146741/nitrogen-dioxide-levels-rebound-in-china",
-      "type": "text/html",
-      "title": "Nitrogen Dioxide Levels Rebound in China",
-      "roles": [
-        "metadata"
       ]
     },
     "Wind_Energy_Areas": {
